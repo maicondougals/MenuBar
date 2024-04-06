@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuBar</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 5000px;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            -webkit-scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            background-color: white;
+
+        
+        }
+        ::-webkit-scrollbar-thumb {
+    background-color: rgba(207, 12, 12, 0); /* Cor transparente */
+}
+   
+        main{
+            width: 100vw;
+            height: 2000px;
+      
+         
+
+        }
+        header{
+            position: absolute;
+            right: 0px;
+            height: 600px;
+            width:88vw;
+            -webkit-width:90vw;
+            background-color: grey;
+            border-radius: 24px;
+            margin: 1%;
+            transition: all .4s ease-out;
+
+            z-index: 0;
+           
+        }
+        nav{
+            position: fixed;
+            width: 8vw;
+            -webkit-width:10vw;
+            height: 100%;
+            background-color: black;
+            border-radius: 24px;
+            margin: 1%;
+            transition: all .4s ease-out;
+
+            z-index: 1;
+        
+        }
+        .header-click{
+            width: 47vw;
+            transition: all .4s ease-out;
+        }
+        .nav-click{
+            width: 50vw;
+            transition: all .4s ease-out;
+        }
+        nav button{
+            margin-left:  0;
+            margin-top: -5px;
+
+            background-color: blue;
+            color: white;
+
+            box-shadow: 0 0 0px 10px white;
+
+            width: 70px;
+            height: 70px;
+            border: none;
+            border-radius: 40px;
+
+            
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <nav id="nav">
+            <button id="nav-button"> > </button>
+        </nav>
+      
+        <header id="header">
+    
+        </header>
+    </main>
+ 
+    <script>
+        document.getElementById('nav-button').addEventListener('click', function(){
+            document.getElementById("nav").classList.toggle('nav-click');
+            document.getElementById('header').classList.toggle('header-click')
+        })
+    </script>
+
+</body>
+</html>
