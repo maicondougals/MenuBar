@@ -70,6 +70,61 @@ nav{
         flex-direction: column;
         align-items: center;
         
+
+        .ul-icons{
+
+            width: 100%;
+            height: 500px;
+
+            position: absolute;
+            top: 100px;
+            left: 25px;
+
+          
+            
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            
+            .li-icons{
+                font-size: 50px;
+
+                list-style-type: none;
+            }
+        }
+        .ul-text{
+            display: none;
+
+            width: 200px;
+            height: 500px;
+
+
+
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
+                 
+            margin: 0;
+            padding: 0;
+
+            flex-direction: column;
+            justify-content:space-between;
+            
+            
+
+            transition: all 1s ease;
+            .li-text{
+                font-size: 36px;
+             
+                list-style-type: none;
+            }
+        }
+        
     }
     nav button{
         
@@ -95,6 +150,11 @@ nav{
     .nav-click{
         width: 300px;
         transition: all .4s ease-out;
+        .ul-text{
+            display: flex;
+            transition: all 1s ease;
+        }
+
     }
     
 }
@@ -146,9 +206,15 @@ nav{
 
                 list-style-type: none;
             }
+            
         }
+        .ul-text{
+            display: none;
+        }
+        
        
     }
+
     nav button{
         display: none;
     }
