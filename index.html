@@ -3,109 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>MenuBar</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            height: 5000px;
-            overflow-x: hidden;
-            scrollbar-width: none;
-            -webkit-scrollbar-width: none;
-            -ms-overflow-style: none;
-            
-            background-color: white;
-
-        
-        }
-        ::-webkit-scrollbar-thumb {
-    background-color: rgba(207, 12, 12, 0); /* Cor transparente */
-}
-   
-        main{
-            width: 100vw;
-            
-      
-         
-
-        }
-        header{
-            position: absolute;
-            right: 0px;
-            height: 600px;
-            width:88vw;
-            -webkit-width:90vw;
-            background-color: grey;
-            border-radius: 24px;
-            margin: 1%;
-            transition: all .4s ease-out;
-
-            z-index: 0;
-           
-        }
-        nav{
-            position: fixed;
-            width: 8vw;
-            -webkit-width:10vw;
-            height: 100%;
-            background-color: black;
-            color: white;
-
-            border-radius: 24px;
-            margin: 1%;
-            transition: all .4s ease-out;
-
-            z-index: 1;
-        
-        }
-
-        .header-click{
-            width: 47vw;
-            transition: all .4s ease-out;
-        }
-        .nav-click{
-            width: 50vw;
-            transition: all .4s ease-out;
-        }
-        nav button{
-            margin-left:  0;
-            margin-top: -5px;
-
-            background-color: blue;
-            color: white;
-
-            box-shadow: 0 0 0px 10px white;
-
-            width: 70px;
-            height: 70px;
-            border: none;
-            border-radius: 40px;
-
-            
-            
-        }
-        
-    </style>
 </head>
 <body>
     <nav id="nav">
-        <button id="nav-button"> > </button>
+        <button id="nav-expandir"> > </button>
 
-        <ul>
-            
-        </ul>
     </nav>
     <main>
         
       
         <header id="header">
-    
+            <div class="header-conteudo">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum numquam in cumque consequatur dolorem? Quis totam dolor earum ipsa reiciendis, odio cum ipsum ad dignissimos laborum soluta eius quia distinctio.</h1>
         </header>
     </main>
  
     <script>
-        document.getElementById('nav-button').addEventListener('click', function(){
+        document.getElementById('nav-expandir').addEventListener('click', function(){
             document.getElementById("nav").classList.toggle('nav-click');
             document.getElementById('header').classList.toggle('header-click')
         })
