@@ -20,26 +20,38 @@
         </div>
 
         <ul class="ul-icons">
-            <li class="li-icons"> <a href=""><i class="fa-solid fa-house"></i></a></li>
-            <li class="li-icons"><a href=""><i class="fa-solid fa-images"></i></a></li>
-            <li class="li-icons"><a href=""><i class="fa-solid fa-address-card"></i></a></li>
-            <li class="li-icons"><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+            <li class="li-icons"> <a onclick="openPage('A', 'conteudo')"><i class="fa-solid fa-house"></i></a></li>
+            <li class="li-icons"><a  onclick="openPage('B', 'conteudo')"><i class="fa-solid fa-images"></i></a></li>
+            <li class="li-icons"><a  onclick="openPage('C', 'conteudo')"><i class="fa-solid fa-address-card"></i></a></li>
+            <li class="li-icons"><a onclick="openPage('D', 'conteudo')"><i class="fa-solid fa-circle-user"></i></a></li>
         </ul>
     </nav>
-    <main>
-        
-      
-        <header id="header">
-            <div class="header-conteudo">
-                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum numquam in cumque consequatur dolorem? Quis totam dolor earum ipsa reiciendis, odio cum ipsum ad dignissimos laborum soluta eius quia distinctio.</h1>
-        </header>
-    </main>
+
+    <section id="conteudo">
+        <h1>Isso mudará</h1>
+    </section>
  
     <script>
         document.getElementById('nav-expandir').addEventListener('click', function(){
             document.getElementById("nav").classList.toggle('nav-click');
-            document.getElementById('header').classList.toggle('header-click')
+            document.getElementById('conteudo').classList.toggle('conteudo-click')
         })
+
+        function openPage(x, y){
+            var indice = x
+            var target = y
+            var url = './content/content'+ indice +'.html ' 
+       
+            var xml = new XMLHttpRequest()
+
+            xml.onreadystatechange = function(){
+                if(xml.readyState == 4 &&  xml.status == 200){
+                    document.getElementById(target).innerHTML = xml.responseText
+                }
+            }
+            xml.open('GET', url , true) 
+            xml.send()
+        }
     </script>
 
 </body>

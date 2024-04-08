@@ -4,21 +4,6 @@ body {
   background-color: white;
 }
 
-main {
-  width: 100%;
-}
-main header {
-  background-color: white;
-  border-radius: 24px;
-  margin: 0;
-  padding: 24px;
-  transition: all 0.4s ease-out;
-}
-main header .header-conteudo {
-  width: 100%;
-  height: 600px;
-}
-
 nav {
   position: fixed;
   background-color: black;
@@ -29,13 +14,6 @@ nav {
 }
 
 @media screen and (min-width: 1024px) {
-  main header {
-    width: auto;
-    height: 600px;
-    background-color: grey;
-    margin: 1vh 0px 0 125px;
-    z-index: 0;
-  }
   nav {
     width: 100px;
     height: 97%;
@@ -86,9 +64,10 @@ nav {
     border: none;
     border-radius: 24px;
   }
-  .header-click {
+  .conteudo-click {
     margin-left: 325px;
     transition: all 0.4s ease-out;
+    background-color: white;
   }
   .nav-click {
     width: 300px;
@@ -98,20 +77,13 @@ nav {
     display: flex;
     transition: all 1s ease;
   }
-}
-@media screen and (max-width: 768px) {
-  main {
-    display: flex;
-    align-items: center;
+  #conteudo {
+    margin-left: 125px;
+    height: 1000px;
     background-color: grey;
   }
-  main header {
-    width: 100%;
-  }
-  main .header-conteudo {
-    width: 100%;
-    height: 600px;
-  }
+}
+@media screen and (max-width: 768px) {
   nav {
     width: 100%;
     height: 100px;
@@ -137,6 +109,11 @@ nav {
   }
   nav button {
     display: none;
+  }
+  #conteudo {
+    width: 100vw;
+    height: 1000px;
+    background-color: rgb(127, 127, 127);
   }
 }
 
