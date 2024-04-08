@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>MenuBar</title>
+</head>
+<body>
+    <nav id="nav">
+        <button id="nav-expandir"> > </button>
+
+
+        <ul class="ul-icons">
+            <li class="li-icons"><i class="fa-solid fa-house"></i></li>
+            <li class="li-icons"><i class="fa-solid fa-images"></i></li>
+            <li class="li-icons"><i class="fa-solid fa-address-card"></i></li>
+            <li class="li-icons"><i class="fa-solid fa-circle-user"></i></li>
+        </ul>
+    </nav>
+    <main>
+        
+      
+        <header id="header">
+            <div class="header-conteudo">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum numquam in cumque consequatur dolorem? Quis totam dolor earum ipsa reiciendis, odio cum ipsum ad dignissimos laborum soluta eius quia distinctio.</h1>
+        </header>
+    </main>
+ 
+    <script>
+        document.getElementById('nav-expandir').addEventListener('click', function(){
+            document.getElementById("nav").classList.toggle('nav-click');
+            document.getElementById('header').classList.toggle('header-click')
+        })
+    </script>
+
+</body>
+</html>

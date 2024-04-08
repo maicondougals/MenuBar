@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  height: 5000px;
+  background-color: white;
+}
+
+main {
+  width: 100%;
+}
+main header {
+  background-color: white;
+  border-radius: 24px;
+  margin: 0;
+  padding: 24px;
+  transition: all 0.4s ease-out;
+}
+main header .header-conteudo {
+  width: 100%;
+  height: 600px;
+}
+
+nav {
+  position: fixed;
+  background-color: black;
+  color: white;
+  border-radius: 24px;
+  transition: all 0.4s ease-out;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  main header {
+    width: auto;
+    height: 600px;
+    background-color: grey;
+    margin: 1vh 0px 0 125px;
+    z-index: 0;
+  }
+  nav {
+    width: 100px;
+    height: 97%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav button {
+    background-color: blue;
+    color: white;
+    box-shadow: 0 0 0px 10px white;
+    width: 90px;
+    height: 70px;
+    border: none;
+    border-radius: 24px;
+  }
+  .header-click {
+    margin-left: 325px;
+    transition: all 0.4s ease-out;
+  }
+  .nav-click {
+    width: 300px;
+    transition: all 0.4s ease-out;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    background-color: grey;
+  }
+  main header {
+    width: 100%;
+  }
+  main .header-conteudo {
+    width: 100%;
+    height: 600px;
+  }
+  nav {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    bottom: 0px;
+  }
+  nav .ul-icons {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  nav .ul-icons .li-icons {
+    font-size: 45px;
+    list-style-type: none;
+  }
+  nav button {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
