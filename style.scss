@@ -3,6 +3,10 @@ body{
     margin: 0;
     height: auto;
     background-color: black;
+
+    font-family: "Libre Caslon Display", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav{
@@ -12,23 +16,26 @@ nav{
         backdrop-filter: blur(24px);
         background-color:rgba(255, 255, 255, 0.211);
 
-    border-style:outset;
 
     color: white;
 
-    border-radius: 24px;
+    border-radius: 40px;
 
     transition: all .4s ease-out;
 
     z-index: 1;
 
 }
+#bola{
+    color: white;
+}
+
 @media screen and (min-width:1024px) {
     
   
     nav{
         width:85px;
-        height: 97%;
+        height: 650px;
 
         margin: 1%;
 
@@ -123,13 +130,32 @@ nav{
         }
 
     }
-    #conteudo{
-      
-        margin-left: 125px;
-        
-        height: 1000px;
-        background-color: grey;
-    }
+    #bola{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: 30px;
+        a{
+         background-color: rgb(114, 114, 114);
+         border-radius: 40px;
+         padding: 10px;
+         cursor: pointer;
+         transition: all .6s ease;
+        }
+        a:hover{
+            box-shadow: 0 0 20px 15px grey;
+            transition: all .6s ease;
+        }
+        img{
+         width: 600px;
+        }
+       
+ 
+       
+     }
+
     
 }
 
@@ -171,13 +197,29 @@ nav{
         
        
     }
+    
+        #bola{
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
 
+           font-size: 30px;
+           a{
+            background-color: rgb(114, 114, 114);
+            border-radius: 40px;
+            padding: 10px;
+           }
+           img{
+            width: 400px;
+           }
+          
+    
+          
+        }
+    
     nav button{
         display: none;
     }
-    #conteudo{
-        width: 100vw;
-        height: 1000px;
-        background-color: rgb(127, 127, 127);
-    }
+ 
 }
