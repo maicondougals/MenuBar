@@ -1,0 +1,581 @@
+@charset "UTF-8";
+:root {
+  --white:rgb(215, 215, 215);
+  --black:rgb(0, 0, 0);
+  --grey:rgb(38, 38, 38);
+  --font-subtitulo:5vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--black);
+  height: auto;
+  overflow-x: hidden;
+  color: var(--white);
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: aparecer 2s ease-in-out;
+}
+header img {
+  animation: aumentar 2s ease-in;
+  animation-timeline: view();
+  animation-range: cover 0% cover 60%;
+}
+
+.container-1 {
+  color: black;
+  background-color: var(--white);
+}
+.container-1 h1 {
+  animation: aparecer 3s ease;
+  -webkit-animation-timeline: view();
+  margin: 20px;
+}
+.container-1 .box-responsivo button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 24px;
+  background-color: rgb(100, 148, 173);
+  color: var(--black);
+  font-size: 15px;
+  margin-top: 20px;
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.container-1 .box-responsivo button:hover {
+  transform: scale(1.1);
+  transition: all 1s linear;
+}
+.container-1 .box-responsivo .tilt-box-wrap {
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+}
+.container-1 .box-responsivo .tilt-box-wrap:hover {
+  transition: all 0.5s linear;
+  transform: scale(1.1);
+}
+.container-1 .box-responsivo .tilt-box {
+  background: linear-gradient(var(--black), var(--grey));
+  width: 99%;
+  height: 99%;
+  text-transform: uppercase;
+  border-radius: 24px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: all 0.6s ease-out;
+}
+.container-1 .box-responsivo .tilt-box strong {
+  transform: translateZ(100px);
+}
+.container-1 .box-responsivo .tilt-box img {
+  transform: translateZ(100px);
+  width: 40%;
+}
+.container-1 .box-responsivo .t_over {
+  width: 33.333%;
+  height: 33.333%;
+  position: absolute;
+  z-index: 1;
+}
+.container-1 .box-responsivo .t_over:nth-child(1) {
+  left: 0px;
+  top: 0px;
+}
+.container-1 .box-responsivo .t_over:nth-child(2) {
+  left: 33.333%;
+  top: 0;
+}
+.container-1 .box-responsivo .t_over:nth-child(3) {
+  left: 66.666%;
+  top: 0;
+}
+.container-1 .box-responsivo .t_over:nth-child(4) {
+  left: 0;
+  top: 33.333%;
+}
+.container-1 .box-responsivo .t_over:nth-child(5) {
+  left: 33.333%;
+  top: 33.333%;
+}
+.container-1 .box-responsivo .t_over:nth-child(6) {
+  left: 66.666%;
+  top: 33.333%;
+}
+.container-1 .box-responsivo .t_over:nth-child(7) {
+  left: 0;
+  top: 66.666%;
+}
+.container-1 .box-responsivo .t_over:nth-child(8) {
+  left: 33.333%;
+  top: 66.666%;
+}
+.container-1 .box-responsivo .t_over:nth-child(9) {
+  left: 66.666%;
+  top: 66.666%;
+}
+.container-1 .box-responsivo .t_over:nth-child(1):hover ~ .tilt-box {
+  transform: rotateX(-20deg) rotateY(20deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(2):hover ~ .tilt-box {
+  transform: rotateX(-20deg) rotateY(0deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(3):hover ~ .tilt-box {
+  transform: rotateX(-20deg) rotateY(-20deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(4):hover ~ .tilt-box {
+  transform: rotateX(0deg) rotateY(20deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(5):hover ~ .tilt-box {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(6):hover ~ .tilt-box {
+  transform: rotateX(0deg) rotateY(-20deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(7):hover ~ .tilt-box {
+  transform: rotateX(20deg) rotateY(20deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(8):hover ~ .tilt-box {
+  transform: rotateX(20deg) rotateY(0deg);
+}
+.container-1 .box-responsivo .t_over:nth-child(9):hover ~ .tilt-box {
+  transform: rotateX(20deg) rotateY(-20deg);
+}
+
+.container-1-5 .container-text {
+  margin: 20px;
+}
+
+.container-2 h1 {
+  text-align: left;
+  margin: 20px;
+}
+.container-2 .carousel {
+  background-color: var(--grey);
+  padding: 20px;
+  height: auto;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.container-2 .carousel .imagem {
+  background: radial-gradient(blue, black, black);
+  border-radius: 24px;
+  margin-left: 20px;
+}
+
+.container-2-5 button {
+  width: 30%;
+  height: 30px;
+  border-radius: 24px;
+  margin-top: 55px;
+  border: none;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.container-2-5 {
+  background: radial-gradient(rgba(15, 0, 128, 0.503) 30%, black 70%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container-2-5 .inclina-container {
+  position: relative;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container-2-5 .inclina {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(50deg) rotateY(20deg);
+  background-color: rgba(255, 255, 255, 0.638);
+  box-shadow: 0px 0px 100px 10px white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada {
+  position: absolute;
+}
+.container-2-5 .camada:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background-image: url(/content/imageA/camada1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  transform: translateZ(20px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(2) {
+  width: 60%;
+  height: 60%;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(/content/imageA/camada2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  transform: translateZ(60px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(3) {
+  width: 100%;
+  height: 20%;
+  top: 2%;
+  left: 7%;
+  transform: translateZ(100px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(4) {
+  width: 50%;
+  height: 80%;
+  left: 7%;
+  top: 20%;
+  text-align: left;
+  transform: translateZ(120px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .camada:nth-child(5) {
+  width: 60%;
+  height: 60%;
+  bottom: 0px;
+  right: 0px;
+  background-image: url(/content/imageA/camada5.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: 25% 20%;
+  transform: translateZ(150px);
+  transition: all 0.6s ease;
+}
+.container-2-5 .inclina:hover > .camada {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+}
+.container-2-5 .inclina:hover {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+  box-shadow: none;
+}
+.container-2-5 .inclinar {
+  transform: translateZ(0px) rotateX(0deg) rotateY(0deg);
+  box-shadow: none;
+}
+
+.container-3 {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  background-color: var(--white);
+}
+.container-3 img {
+  width: 3em;
+  height: auto;
+  border-radius: 24px;
+  padding: 5px;
+}
+
+@keyframes diminuir {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.5;
+  }
+}
+@keyframes aumentar {
+  from {
+    scale: 0.5;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lado {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes balança {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, 20deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, -20deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+@media screen and (min-width: 1023px) {
+  nav img {
+    width: 400px;
+  }
+  header {
+    background-image: url(/content/imageA/capaComputador.png);
+    background-position: 100% auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1200px;
+  }
+  header img {
+    width: 100%;
+  }
+  .container-1 {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .container-1 h1 {
+    font-size: 36px;
+  }
+  .container-1 .box-responsivo .tilt-box-wrap {
+    width: 400px;
+    height: 400px;
+  }
+  .container-1-5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+  }
+  .container-1-5 img {
+    width: 90%;
+  }
+  .container-1-5 .container-text {
+    animation: lado 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+    background-color: var(--grey);
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container-2 h1 {
+    font-size: 36px;
+  }
+  .container-2 .carousel .imagem {
+    width: 300px;
+    height: 300px;
+  }
+  .container-2-5 {
+    height: 800px;
+  }
+  .container-2-5 .inclina-container {
+    width: 400px;
+    height: 400px;
+  }
+  .container-2-5 .inclina {
+    width: 800px;
+    height: 400px;
+  }
+  .container-3 {
+    height: 400px;
+  }
+  .container-3 img:hover {
+    background: radial-gradient(blue, rgba(0, 0, 255, 0.062), var(--white));
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav img {
+    width: 400px;
+  }
+  header {
+    background-image: url(/content/imageA/capaTablet.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 900px;
+  }
+  header img {
+    width: 100%;
+  }
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+  }
+  .container-1 h1 {
+    font-size: var(--font-subtitulo);
+  }
+  .container-1 .box-responsivo .tilt-box-wrap {
+    width: 400px;
+    height: 400px;
+  }
+  .container-1-5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+  }
+  .container-1-5 img {
+    width: 50%;
+  }
+  .container-1-5 .container-text {
+    background-color: var(--grey);
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container-2 h1 {
+    font-size: var(--font-subtitulo);
+  }
+  .container-2 .carousel .imagem {
+    width: 250px;
+    height: 250px;
+  }
+  .container-2-5 {
+    height: 700px;
+  }
+  .container-2-5 .inclina-container {
+    width: 400px;
+    height: 400px;
+  }
+  .container-2-5 .inclina {
+    width: 600px;
+    height: 400px;
+  }
+  .container-3 {
+    height: 400px;
+  }
+  .container-3 img:hover {
+    background: radial-gradient(blue, rgba(0, 0, 255, 0.048), var(--white));
+  }
+}
+@media screen and (max-width: 768px) {
+  nav img {
+    width: 200px;
+  }
+  header {
+    background-image: url(/content/imageA/capaCelular.png);
+    background-position: 100% auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    align-items: flex-end;
+  }
+  header img {
+    width: 100%;
+  }
+  .container-1 {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-1 h1 {
+    font-size: var(--font-subtitulo);
+  }
+  .container-1 .box-responsivo .tilt-box-wrap {
+    width: 300px;
+    height: 400px;
+  }
+  .container-1-5 {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .container-1-5 img {
+    animation: aumentar 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
+    width: 100%;
+  }
+  .container-1-5 .container-text {
+    animation: aparecer 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
+    background-color: var(--grey);
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
+  }
+  .container-2 h1 {
+    font-size: var(--font-subtitulo);
+  }
+  .container-2 .carousel .imagem {
+    width: 200px;
+    height: 200px;
+  }
+  .container-2-5 {
+    height: 500px;
+  }
+  .container-2-5 .inclina-container {
+    width: 200px;
+    height: 200px;
+    font-size: 10px;
+  }
+  .container-2-5 .inclina {
+    width: 350px;
+    height: 200px;
+  }
+  .container-3 {
+    height: 250px;
+  }
+}
+
+/*# sourceMappingURL=contentA.css.map */
