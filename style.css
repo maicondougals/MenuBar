@@ -13,7 +13,6 @@ nav {
   backdrop-filter: blur(24px);
   background-color: rgba(255, 255, 255, 0.211);
   color: white;
-  border-radius: 40px;
   transition: all 0.4s ease-out;
   z-index: 1;
 }
@@ -22,16 +21,10 @@ nav {
   color: white;
 }
 
-.transition-click {
-  display: block;
-  animation: transicao 2s ease-out;
-}
-
 @media screen and (min-width: 1024px) {
   nav {
     width: 85px;
     height: 650px;
-    margin: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;

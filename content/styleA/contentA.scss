@@ -20,24 +20,25 @@ body{
     font-family: "Libre Caslon Display", serif;
     font-weight: 400;
     font-style: normal; 
-    .transition{
-        
-        position: absolute;
-        left: 50%;
-        top: 500px;
-        width: 10px;
-        height: 10px;
-        background:black;
-
-        
-        animation: transicao 10s infinite;
-   
-   
-        
-    }
+    
  
 }
+.transition{
+        
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    width: 10px;
+    height: 10px;
+    background:black;
 
+    
+    animation: transicao 1s ease;
+    z-index: 1;
+
+
+    
+}
 header{
     
     width: 100%;

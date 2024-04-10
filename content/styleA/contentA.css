@@ -21,6 +21,17 @@ body {
   font-style: normal;
 }
 
+.transition {
+  position: absolute;
+  left: 50%;
+  top: 500px;
+  width: 10px;
+  height: 10px;
+  background: black;
+  animation: transicao 1s ease;
+  z-index: 1;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -351,6 +362,14 @@ header img {
   }
   100% {
     transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+@keyframes transicao {
+  from {
+    transform: scale(200);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @media screen and (min-width: 1023px) {
