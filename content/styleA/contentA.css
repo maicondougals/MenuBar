@@ -292,22 +292,6 @@ header img {
   box-shadow: none;
 }
 
-.container-3 {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-  text-align: center;
-  background-color: var(--white);
-}
-.container-3 img {
-  width: 3em;
-  height: auto;
-  border-radius: 24px;
-  padding: 5px;
-}
-
 @keyframes diminuir {
   from {
     scale: 1;
@@ -576,9 +560,6 @@ header img {
   .container-2-5 .inclina {
     width: 350px;
     height: 200px;
-  }
-  .container-3 {
-    height: 250px;
   }
 }
 

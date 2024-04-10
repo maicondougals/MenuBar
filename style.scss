@@ -3,7 +3,7 @@ body{
     margin: 0;
     height: auto;
     background-color: black;
-
+    color: whitesmoke;
     font-family: "Libre Caslon Display", serif;
     font-weight: 400;
     font-style: normal;
@@ -11,7 +11,7 @@ body{
 
 nav{
     position: fixed;
-
+    
     -webkit-backdrop-filter: blur(24px);
         backdrop-filter: blur(24px);
         background-color:rgba(255, 255, 255, 0.211);
@@ -24,15 +24,17 @@ nav{
     transition: all .4s ease-out;
 
     z-index: 1;
+    .li-icons{
+        cursor: pointer;
+    }
+  
 
 }
 #bola{
     color: white;
    
 }
-.transition-click{
-   
-}
+
 
 
 @media screen and (min-width:1024px) {
@@ -171,6 +173,7 @@ nav{
         height: 70px;
         
         margin: 0;
+        padding: 0;
         bottom: 0px;
 
         .ul-icons{
@@ -191,14 +194,14 @@ nav{
 
             .li-icons{
                 font-size: 30px;
-
+                margin: 0;
+                padding: 0;
                 list-style-type: none;
+               
             }
             
         }
-        .ul-text{
-            display: none;
-        }
+       
         
        
     }
@@ -209,14 +212,14 @@ nav{
            flex-direction: column;
            align-items: center;
 
-           font-size: 30px;
+           font-size: 24px;
            a{
-            background-color: rgb(114, 114, 114);
+            background-color: rgb(119, 151, 255);
             border-radius: 40px;
             padding: 10px;
            }
            img{
-            width: 400px;
+            width: 350px;
            }
           
     
