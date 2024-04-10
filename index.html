@@ -35,14 +35,16 @@
             <h1>Olá!</h1>
             
             <img  src="/images/79a384c3c449ad01b0e57e790807b2c0.gif" alt="">
-            <a onclick="openPage('A', 'conteudo')">Iniciar</a>
-            
+            <a onclick="openPage('A', 'conteudo')" id="iniciar">Iniciar</a>
+          
         </div>
        
     </section>
  
     <script>
-       
+        document.getElementById("iniciar").addEventListener('click',function(){
+            document.getElementById('transition').classList.toggle('transition-click')
+        })
 
         function openPage(x, y){
             var indice = x

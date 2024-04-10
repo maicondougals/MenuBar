@@ -22,6 +22,11 @@ nav {
   color: white;
 }
 
+.transition-click {
+  display: block;
+  animation: transicao 2s ease-out;
+}
+
 @media screen and (min-width: 1024px) {
   nav {
     width: 85px;
