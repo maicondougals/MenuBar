@@ -23,7 +23,7 @@ nav .li-icons {
 #bola {
   color: white;
   background-image: url(/images/background-video.mp4);
-  background-position: center 100%;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
